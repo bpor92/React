@@ -8,16 +8,16 @@ class App extends Component {
   state = {
     term: '',
     todoList: [
-      {text: 'cos do zrobienia', id: '104'},
-      {text: 'cos do zrobienia2', id: '1514'},
-      {text: 'cos do zrobienia3', id: '1214'},
+      {text: 'Something to do', id: 3123104},
+      {text: 'Buy shoes', id: 151432},
+      {text: 'Go to work', id: 3331214},
     ]
   }
-  changeTerm = (e) => {
-    this.setState({term: e.target.value})
+  changeTerm = event => {
+    this.setState({term: event.target.value})
   }
 
-  deleteItem = (id) => {
+  deleteItem = id => {
     this.setState({
       todoList: this.state.todoList.filter(item => item.id !== id)
     })
